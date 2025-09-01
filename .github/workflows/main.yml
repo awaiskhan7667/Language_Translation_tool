@@ -13,7 +13,7 @@ jobs:
           fetch-depth: 0
           lfs: true
 
-      - name: Push to hub
+      - name: force push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: git push https://techsolution6556:$HF_TOKEN@huggingface.co/spaces/techsolution6556/lang_Trans_tool main
