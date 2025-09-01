@@ -2,8 +2,6 @@ name: Sync to Hugging Face hub
 on:
   push:
     branches: [main]
-
-  # to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
@@ -14,7 +12,8 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
+
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://rechsolutions6556:$HF_TOKEN@huggingface.co/spaces/techsolution6556/techsolution6556/lang_Trans_tool main
+        run: git push https://techsolution6556:$HF_TOKEN@huggingface.co/spaces/techsolution6556/lang_Trans_tool main
